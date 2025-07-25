@@ -1,0 +1,11 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore environment files
+.env
+
+# macOS files
+.DS_Store
+
+# Optional
+package-lock.json
