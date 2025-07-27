@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo and Title */}
         <div className="flex items-center space-x-3">
-          <img src="/images/hahu-logo.png" alt="HahuTech Logo" className="h-10 w-auto sm:h-12 md:h-14" />
+          <img src="/images/hahu-logo.png" alt="HahuTech Logo" className="h-10 sm:h-12 md:h-16 w-auto" />
           <h1 className="text-white text-xl md:text-2xl font-bold">HahuTech Solutions</h1>
         </div>
 
