@@ -30,7 +30,7 @@ const Contact = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -57,10 +57,10 @@ const Contact = () => {
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
           Let’s work together. Fill out the form and we’ll respond within 1–2 business days.
         </p>
- <p className="text-sm text-gray-500 uppercase tracking-wider">
-  Email: <a href="mailto:hello@hahutech.com" className="text-blue-400 hover:underline">hello@hahutech.com</a> |
-  Phone: <a href="tel:+13015038627" className="text-blue-400 hover:underline ml-1">(301) 503-8627</a>
-</p>
+        <p className="text-sm text-gray-500 uppercase tracking-wider">
+          Email: <a href="mailto:hello@hahutech.com" className="text-blue-400 hover:underline">hello@hahutech.com</a> |
+          Phone: <a href="tel:+13015038627" className="text-blue-400 hover:underline ml-1">(301) 503-8627</a>
+        </p>
       </div>
 
       <div className="flex justify-center mt-12 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
