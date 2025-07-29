@@ -29,23 +29,25 @@ const Contact = () => {
       return;
     }
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+try {
+  const res = await fetch('https://hahutech-backend.onrender.com/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData),
+  });
 
-      if (res.ok) {
-        setStatus('✅ Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('❌ Something went wrong. Please try again.');
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus('❌ Error sending message.');
-    }
+  if (res.ok) {
+    setStatus('✅ Message sent successfully!');
+    setFormData({ name: '', email: '', message: '' });
+  } else {
+    const errorText = await res.text(); // Get error message from backend
+    console.error('❌ Server responded with error:', errorText);
+    setStatus(`❌ Server error: ${errorText}`);
+  }
+} catch (err) {
+  console.error('❌ Network or other error:', err);
+  setStatus(`❌ Error sending message: ${err.message}`);
+}
   };
 
   return (
