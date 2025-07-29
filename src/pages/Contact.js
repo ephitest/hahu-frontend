@@ -60,7 +60,7 @@ try {
           Let’s work together. Fill out the form and we’ll respond within 1–2 business days.
         </p>
         <p className="text-sm text-gray-500 uppercase tracking-wider">
-          Email: <a href="mailto:hello@hahutech.com" className="text-blue-400 hover:underline">hello@hahutech.com</a> |
+          Email: <a href="mailto:info@hahutechsolutions.com" className="text-blue-400 hover:underline">info@hahutechsolutions.com</a> |
           Phone: <a href="tel:+13015038627" className="text-blue-400 hover:underline ml-1">(301) 503-8627</a>
         </p>
       </div>
