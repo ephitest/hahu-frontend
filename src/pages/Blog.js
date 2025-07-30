@@ -5,17 +5,31 @@ const Blog = () => {
   const posts = [
     {
       id: 1,
-      title: '5 Reasons to Modernize Your IT Infrastructure in 2025',
+      title: 'Why Modernizing Your IT Infrastructure Is Critical in 2025',
       date: 'July 30, 2025',
       summary:
-        'Discover why upgrading your legacy systems can boost performance, reduce costs, and enhance scalability for your business.',
+        'Legacy systems are holding back innovation. Discover how migrating to cloud-native platforms can reduce costs, increase agility, and future-proof your business.',
     },
     {
       id: 2,
-      title: 'Cybersecurity Best Practices for Small Businesses',
-      date: 'July 15, 2025',
+      title: 'Best Practices for Implementing Secure Cloud Architecture',
+      date: 'July 22, 2025',
       summary:
-        'Learn how to secure your digital assets with practical and affordable cybersecurity strategies tailored for growing companies.',
+        'Learn the foundational principles of building secure, scalable cloud environments—from identity access management to encryption and zero-trust frameworks.',
+    },
+    {
+      id: 3,
+      title: 'AI-Driven Decision-Making: Turning Data into Action',
+      date: 'July 14, 2025',
+      summary:
+        'Explore how organizations are leveraging AI and machine learning models to transform raw data into predictive insights, driving faster and smarter decisions.',
+    },
+    {
+      id: 4,
+      title: 'Data Engineering Trends That Will Shape the Next Decade',
+      date: 'July 5, 2025',
+      summary:
+        'From real-time pipelines to data mesh architectures, stay ahead of the curve by understanding the latest technologies reshaping the data engineering landscape.',
     },
   ];
 
@@ -43,7 +57,7 @@ const Blog = () => {
         ))}
 
         <p className="text-sm text-gray-500 mt-8">
-          More posts coming soon. Stay connected with HahuTech Solutions.
+          More articles coming soon. Stay connected with HahuTech Solutions for insights on AI, Cloud, and Data Engineering.
         </p>
       </div>
     </motion.main>
