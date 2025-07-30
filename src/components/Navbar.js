@@ -45,6 +45,7 @@ const Navbar = () => {
           <Link to="/" className={linkClass('/')}>Home</Link>
           <Link to="/about" className={linkClass('/about')}>About</Link>
           <Link to="/services" className={linkClass('/services')}>Services</Link>
+          <Link to="/blog" className={linkClass('/blog')}>Blog</Link>
           <Link to="/contact" className={linkClass('/contact')}>Contact</Link>
         </div>
       </div>
@@ -55,6 +56,7 @@ const Navbar = () => {
           <Link to="/" className={linkClass('/')}>Home</Link>
           <Link to="/about" className={linkClass('/about')}>About</Link>
           <Link to="/services" className={linkClass('/services')}>Services</Link>
+          <Link to="/blog" className={linkClass('/blog')}>Blog</Link>
           <Link to="/contact" className={linkClass('/contact')}>Contact</Link>
         </div>
       )}
