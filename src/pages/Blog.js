@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Blog = () => {
   const posts = [
@@ -19,7 +20,12 @@ const Blog = () => {
   ];
 
   return (
-    <main className="bg-gray-900 text-white min-h-screen py-16 px-4 sm:px-8">
+    <motion.main
+      className="bg-gray-900 text-white min-h-screen py-12 px-4 sm:px-8"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-10 text-blue-400 border-b border-blue-400 pb-2">
           HahuTech Blog
@@ -40,7 +46,7 @@ const Blog = () => {
           More posts coming soon. Stay connected with HahuTech Solutions.
         </p>
       </div>
-    </main>
+    </motion.main>
   );
 };
 
