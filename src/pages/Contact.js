@@ -32,8 +32,12 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    setStatus('⏳ Sending...');
 
+    // ✅ Show instant success message before backend finishes
+    setStatus('✅ Message sent successfully!');
+    setFormData({ name: '', email: '', message: '' });
+
+    // Send to backend in background
     try {
       const res = await fetch('https://hahutech-backend.onrender.com/api/contact', {
         method: 'POST',
@@ -41,17 +45,14 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        setStatus('✅ Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
+      if (!res.ok) {
         const errorText = await res.text();
         console.error('❌ Server responded with error:', errorText);
-        setStatus(`❌ Server error: ${errorText}`);
+        // Keep success message for user
       }
     } catch (err) {
       console.error('❌ Network or other error:', err);
-      setStatus(`❌ Error sending message: ${err.message}`);
+      // Keep success message for user
     } finally {
       setIsSubmitting(false);
     }
